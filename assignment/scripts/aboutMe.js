@@ -63,13 +63,10 @@ else {
 // console.log `mostPets` after the conditional has run.
 let mostPets = pets || friendsPets
 if (pets >= friendsPets){
-  mostPets=pets
 }
   else if (pets <= friendsPets){
-  mostPets=friendsPets
 }
 console.log('mostPets');
-
 
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
 

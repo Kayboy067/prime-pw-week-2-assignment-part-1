@@ -29,7 +29,7 @@ pets += 2;
 const allowedPets = 2;
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!",
 // if it's not true, console log "How about we stay home?"
-if (adventurous){
+if (adventurous === true){
   console.log('Adventures are great!');
 }
 else {
@@ -61,13 +61,26 @@ else {
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
-let mostPets = pets || friendsPets
+let mostPets = pets && friendsPets
 if (pets >= friendsPets){
 }
   else if (pets <= friendsPets){
 }
-console.log('mostPets');
+console.log(mostPets);
 
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
+switch (mostPets) {
+  case true:
+  console.log('true');
+  pets >= friendsPets;
+  case false:
+  console.log('false');
+  pets <= friendsPets
+    break;
+  default:
+
+}
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
+let message = (adventurous === true) ? 'Adventures are great!' : 'How about we stay home';
+console.log(message);

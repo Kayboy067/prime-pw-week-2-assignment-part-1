@@ -29,15 +29,14 @@ pets += 2;
 const allowedPets = 2;
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!",
 // if it's not true, console log "How about we stay home?"
-if (adventurous === true){
+if (adventurous){
   console.log('Adventures are great!');
-}
-else {
+}else {
   console.log('How about we stay home?');
 }
 // 14 - Create a compound conditional: if luckyNumber is 2 and adventurous is true,
 // console log "Roll the dice!"
-if(luckyNumber =2 && adventurous){
+if (luckyNumber === 2 && adventurous){
   console.log('Roll the dice!');
 }
 // 15 - Write a conditional that console logs "I can have more pets!"
@@ -45,13 +44,12 @@ if(luckyNumber =2 && adventurous){
 // console logs "I have enough pets" if the value of `pets` is equal to the value of `allowedPets`,
 // and console logs "Oh no, I have too many pets!"
 // if the value of `pets` is greater than the value of `allowedPets`.
-if ( pets < allowedPets ){
-  console.log( 'I can have more pets' );
-}
-else if (pets = allowedPets) {
+
+if (pets < allowedPets){
+  console.log('I can have more pets');
+}else if (pets===allowedPets) {
   console.log('I have enough pets');
-}
-else {
+}else {
   console.log( 'Oh no, I have too many pets');
 }
 // STRETCH GOALS:
@@ -61,24 +59,29 @@ else {
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
-let mostPets = pets && friendsPets
-if (pets >= friendsPets){
+let mostPets;
+if (pets > friendsPets) {
+  mostPets = pets;
+  console.log(mostPets, "1")
+} else if (pets < friendsPets) {
+  mostPets = friendsPets;
+  console.log(mostPets, "2")
+} else {
+  mostPets = pets || friendsPets;
+  console.log(mostPets, "3")
 }
-  else if (pets <= friendsPets){
-}
-console.log(mostPets);
 
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
-switch (mostPets) {
-  case true:
-  console.log('true');
-  pets >= friendsPets;
+mostPets;
+switch (pets >= friendsPets) {
+  case  true:
+   mostPets = pets;
+    console.log(mostPets);
+  break;
   case false:
-  console.log('false');
-  pets <= friendsPets
-    break;
-  default:
-
+   mostPets = friendsPets;
+    console.log(mostPets);
+  break;
 }
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
